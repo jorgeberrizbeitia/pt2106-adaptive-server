@@ -1,16 +1,13 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the user model to whatever makes sense in this case
+// ! Simple user with username & password for auth & checking who to chat with
+// ! Full auth is needed for using the session
 const userSchema = new Schema(
   {
-    username: {
-      type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
-    },
+    username: String,
     password: String,
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,
   }
 );
